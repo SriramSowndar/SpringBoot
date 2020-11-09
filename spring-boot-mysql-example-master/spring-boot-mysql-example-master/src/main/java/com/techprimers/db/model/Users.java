@@ -1,9 +1,6 @@
 package com.techprimers.db.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
-@Data
 @Entity
 @Table(name="student")
 public class Users {
@@ -16,4 +13,28 @@ public class Users {
     private String name;
     @Column(name = "FavBook")
     private String favBook;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getFavBook() {
+        return favBook;
+    }
+
+    public void setFavBook(String favBook) {
+        this.favBook = favBook;
+    }
 }
